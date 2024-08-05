@@ -21,7 +21,7 @@ const NewPost = ({agregarPost}) => {
 
   return (
     <>
-    <h1>Nuevo Post</h1>
+    <h1 style={{textAlign:"center"}}>Nuevo Post</h1>
     <form onSubmit={handleSubmit}>
         <label htmlFor="id">id:</label>
         <input type="text" id="id" name="id" value={inputValue} onChange={onInputChange}></input><br/>

@@ -12,6 +12,7 @@ export const RouterPrincipal = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/posteos" element={<Posteos />} />
+          <Route path="/posteos/:id" element={<Posteos />} />
           <Route path="/crear" element={<NewPost />} />
         </Routes>
       </BrowserRouter>

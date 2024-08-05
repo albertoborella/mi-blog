@@ -6,6 +6,7 @@
     list-style: none;
     margin: 0px;
     padding: 0px;
+    text-align: center;
   }
   
 .Navbar ul li {
@@ -21,6 +22,7 @@
   
 .Navbar ul li a:hover {
     background-color: rgb(92, 92, 94);
+    color: yellow;
   }
 form {
   width: 70%;
@@ -29,9 +31,11 @@ form {
 input {
   width: 100%;
   margin-bottom: 5px;
+  padding: 10px;
 }
 label {
   margin-left: 0px;
+  font-size: 14px;
 }
 textarea {
   width: 100%;
