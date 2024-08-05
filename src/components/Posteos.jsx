@@ -1,13 +1,10 @@
 import { useState } from "react"
-import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import "./Styles.css"
 import NewPost from "./NewPost"
 
 export const Posteos = () => {
-  const param = useParams()
-  const post_id = Number(param)
-  console.log(post_id)
+  
 
     const posts = [
         {
@@ -60,7 +57,7 @@ export const Posteos = () => {
               <p key={dato.id}>{dato.texto}</p>
               <button className="boton" onClick={() => alert(`Leer el Post ID: ${dato.id}` )}>Leer</button>
               {/* <button className="boton" onClick={() => alert(`Modificar Post ID: ${dato.id}` )}>Modificar</button> */}
-              <Link to={`posteos/${post_id}`}>Ver</Link>
+              <Link to={`${dato.id}`}>Ver</Link>
               </div>
             </>
           ))
