@@ -52,9 +52,9 @@ export const Posteos = () => {
         {
           datos.map((dato) => (
             <>
-              <div className="card">
-              <li className="titulo" key={dato.id}>{dato.titulo}</li>
-              <p key={dato.id}>{dato.texto}</p>
+              <div className="card" key={dato.id}>
+              <li className="titulo">{dato.titulo}</li>
+              <p>{dato.texto}</p>
               <button className="boton" onClick={() => alert(`Leer el Post ID: ${dato.id}` )}>Leer</button>
               {/* <button className="boton" onClick={() => alert(`Modificar Post ID: ${dato.id}` )}>Modificar</button> */}
               <Link to={`${dato.id}`}>Ver</Link>
