@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import "./Styles.css"
-import NewPost from "./NewPost"
+import styles from "../Posteos/posteos.module.css"
+import NewPost from "../NewPost/NewPost"
 
 export const Posteos = () => {
   
@@ -46,16 +46,16 @@ export const Posteos = () => {
     const [datos, setDatos] = useState(posts)
 
   return (
-    <div style={{textAlign:"center"}}>
-        <h1 style={{textAlign:"center"}}>Mis Posts</h1>
+    <div style={{textAlign:"center", marginTop:"80px"}}>
+        
         {/* <NewPost agregarPost={setDatos}/> */}
         {
           datos.map((dato) => (
             <>
-              <div className="card" key={dato.id}>
-              <li className="titulo">{dato.titulo}</li>
+              <div className={styles.card} key={dato.id}>
+              <li className={styles.titulo}>{dato.titulo}</li>
               <p>{dato.texto}</p>
-              <button className="boton" onClick={() => alert(`Leer el Post ID: ${dato.id}` )}>Leer</button>
+              <button className={styles.boton} onClick={() => alert(`Leer el Post ID: ${dato.id}` )}>Leer</button>
               {/* <button className="boton" onClick={() => alert(`Modificar Post ID: ${dato.id}` )}>Modificar</button> */}
               <Link to={`${dato.id}`}>Ver</Link>
               </div>

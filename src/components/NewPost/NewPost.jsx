@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './newpost.module.css'
 
 const NewPost = ({agregarPost}) => {
 
@@ -21,7 +22,7 @@ const NewPost = ({agregarPost}) => {
 
   return (
     <>
-    <h1 style={{textAlign:"center"}}>Nuevo Post</h1>
+    <h1 className={styles.titulo}>Nuevo Post</h1>
     <form onSubmit={handleSubmit}>
         <label htmlFor="id">id:</label>
         <input type="text" id="id" name="id" value={inputValue} onChange={onInputChange}></input><br/>
@@ -33,7 +34,7 @@ const NewPost = ({agregarPost}) => {
         <input type="text" id="titulo" name="titulo" value={inputValue} onChange={onInputChange}></input><br/>
         <label htmlFor="texto">Texto:</label>
         <textarea id="texto" name="texto" rows={8} value={inputValue} onChange={onInputChange}></textarea><br/>
-        <input type="submit" value="Agregar Post"></input>
+        <button type="submit">Agregar Post</button>
     </form>
     </>
 
